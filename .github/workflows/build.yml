@@ -77,8 +77,8 @@ jobs:
                   tar -czvf dist/paqet-linux-${{ matrix.goarch }}-${{ steps.ref_id.outputs.ref }}.tar.gz \
                     paqet_linux_${{ matrix.goarch }} \
                     README.md \
-                    example/config.yaml.example \
-                    example/simple.yaml.example
+                    example/client.yaml.example \
+                    example/server.yaml.example
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
@@ -144,8 +144,8 @@ jobs:
                   7z a -tzip dist/paqet-windows-${{ matrix.goarch }}-${{ steps.ref_id.outputs.ref }}.zip \
                     paqet_windows_${{ matrix.goarch }}.exe \
                     README.md \
-                    example/config.yaml.example \
-                    example/simple.yaml.example
+                    example/client.yaml.example \
+                    example/server.yaml.example
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
@@ -203,8 +203,8 @@ jobs:
                   tar -czvf dist/paqet-darwin-${{ matrix.goarch }}-${{ steps.ref_id.outputs.ref }}.tar.gz \
                     paqet_darwin_${{ matrix.goarch }} \
                     README.md \
-                    example/config.yaml.example \
-                    example/simple.yaml.example
+                    example/client.yaml.example \
+                    example/server.yaml.example
 
             - name: Upload Artifact
               uses: actions/upload-artifact@v4
